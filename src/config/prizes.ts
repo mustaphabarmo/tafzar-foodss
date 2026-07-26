@@ -27,7 +27,7 @@ export const prizes: Prize[] = [
   { id: "cookies", label: "Free Cookies", weight: 8, description: "A pack of our classics." },
   { id: "bogo", label: "Buy 1 Get 1 Free", weight: 6, description: "On any single item." },
   { id: "mystery", label: "Mystery Gift", weight: 4, description: "Collect it at our stand!" },
-  { id: "none", label: "Try Again Next Time", weight: 15, isLoss: true },
+  { id: "none", label: "Try Again", weight: 15, isLoss: true },
 ];
 
 /** Branding shown across the app. */
