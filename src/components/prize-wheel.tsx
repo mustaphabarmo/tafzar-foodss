@@ -60,7 +60,6 @@ export function PrizeWheel({ rotation, spinning, disabled, onSpin, onSpinEnd }: 
           {prizes.map((prize, i) => {
             const start = i * slice;
             const mid = start + slice / 2;
-            const label = polar(mid, R * 0.62);
             return (
               <g key={prize.id}>
                 <path
@@ -70,18 +69,19 @@ export function PrizeWheel({ rotation, spinning, disabled, onSpin, onSpinEnd }: 
                   strokeWidth={1.5}
                 />
                 <text
-                  x={label.x}
-                  y={label.y}
-                  transform={`rotate(${mid} ${label.x} ${label.y})`}
-                  textAnchor="middle"
+                  x={CENTER + R * 0.88}
+                  y={CENTER}
+                  transform={`rotate(${mid - 90} ${CENTER} ${CENTER})`}
+                  textAnchor="end"
                   dominantBaseline="middle"
                   className="font-display"
                   fill="var(--wheel-label)"
-                  fontSize={prize.label.length > 16 ? 15 : 17}
+                  fontSize={prize.label.length > 14 ? 14 : 16}
                   fontWeight={700}
                 >
-                  {prize.label.length > 18 ? `${prize.label.slice(0, 17)}…` : prize.label}
+                  {prize.label}
                 </text>
+
               </g>
             );
           })}
