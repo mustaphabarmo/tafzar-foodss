@@ -1,8 +1,6 @@
 /**
- * Prize configuration.
- *
- * Edit freely: the wheel renders one slice per entry and the spin engine
- * respects `weight` (relative probability). No wheel logic changes needed.
+ * Prize configuration for Tafzar Foods Spin Wheel.
+ * Slices are updated to reflect authentic Tafzar menu items & offers.
  */
 export interface Prize {
   /** Unique, stable id — used for storage and future backend syncing. */
@@ -21,13 +19,12 @@ export const prizes: Prize[] = [
   { id: "disc-5", label: "5% Discount", weight: 20, description: "On your next Tafzar order." },
   { id: "disc-10", label: "10% Discount", weight: 16, description: "On your next Tafzar order." },
   { id: "disc-15", label: "15% Discount", weight: 10, description: "On your next Tafzar order." },
-  { id: "disc-20", label: "20% Discount", weight: 5, description: "On your next Tafzar order." },
-  { id: "cupcake", label: "Free Cupcake", weight: 8, description: "Freshly baked, on the house." },
-  { id: "bread", label: "Free Bread", weight: 8, description: "One loaf of your choice." },
-  { id: "cookies", label: "Free Cookies", weight: 8, description: "A pack of our classics." },
-  { id: "bogo", label: "Buy 1 Get 1 Free", weight: 6, description: "On any single item." },
-  { id: "mystery", label: "Mystery Gift", weight: 4, description: "Collect it at our stand!" },
-  { id: "none", label: "Try Again", weight: 15, isLoss: true },
+  { id: "brownie", label: "Free Brownie", weight: 12, description: "Rich & fudgy signature Brownie." },
+  { id: "golden-bites", label: "Free Golden Bites", weight: 10, description: "3 pcs of crispy golden goodness." },
+  { id: "glazed-puffs", label: "Free Glazed Puffs", weight: 8, description: "6 pcs of sweet vanilla glazed puffs." },
+  { id: "bogo", label: "Buy 1 Get 1 Free", weight: 8, description: "On any signature item." },
+  { id: "mystery", label: "Mystery Gift", weight: 6, description: "Special surprise treat from Tafzar Foods!" },
+  { id: "none", label: "Try Again", weight: 10, isLoss: true },
 ];
 
 /** Branding shown across the app. */
